@@ -148,7 +148,7 @@ aws configure
 ```
 
 ```bash
-aws eks --region eu-west-1 update-kubeconfig --name tws-eks-cluster
+aws eks --region ap-south-1 update-kubeconfig --name tws-eks-cluster
 ```
 9. **Check your cluster:**
 ```bash
@@ -283,7 +283,7 @@ Add your Access Key and Secret Key when prompted.
 **9. Update Kubeconfig for EKS**<br/>
 Run the following important command:
 ```bash
-aws eks update-kubeconfig --region eu-west-1 --name tws-eks-cluster
+aws eks update-kubeconfig --region ap-south-1 --name tws-eks-cluster
 ```
 * This command maps your EKS cluster with your Bastion server.
 * It helps to communicate with EKS components.
@@ -390,7 +390,7 @@ Ingress Annotations:
 annotations:
     alb.ingress.kubernetes.io/group.name: easyshop-app-lb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:876997124628:certificate/b69bb6e7-cbd1-490b-b765-27574080f48c
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:630471054272:certificate/b69bb6e7-cbd1-490b-b765-27574080f48c
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/backend-protocol: HTTP
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
@@ -444,7 +444,7 @@ ingressClassName: alb
 annotations:
       alb.ingress.kubernetes.io/group.name: easyshop-app-lb
       alb.ingress.kubernetes.io/scheme: internet-facing
-      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:876997124628:certificate/b69bb6e7-cbd1-490b-b765-27574080f48c
+      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:630471054272:certificate/b69bb6e7-cbd1-490b-b765-27574080f48c
       alb.ingress.kubernetes.io/target-type: ip
 			alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
       alb.ingress.kubernetes.io/ssl-redirect: '443'
@@ -460,7 +460,7 @@ ingressClassName: alb
 annotations:
       alb.ingress.kubernetes.io/group.name: easyshop-app-lb
       alb.ingress.kubernetes.io/scheme: internet-facing
-      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:876997124628:certificate/b69bb6e7-cbd1-490b-b765-27574080f48c
+      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:630471054272:certificate/b69bb6e7-cbd1-490b-b765-27574080f48c
       alb.ingress.kubernetes.io/target-type: ip
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
       alb.ingress.kubernetes.io/ssl-redirect: '443'
@@ -671,7 +671,7 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/backend-protocol: HTTP
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:876997124628:certificate/b69bb6e7-cbd1-490b-b765-27574080f48c
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:630471054272:certificate/b69bb6e7-cbd1-490b-b765-27574080f48c
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: '443'
   # kubernetes.io/ingress.class: nginx
