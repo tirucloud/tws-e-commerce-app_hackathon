@@ -1,1 +1,1 @@
-aws eks --region ap-south-1 update-kubeconfig --name tws-eks-cluster
+aws eks update-kubeconfig --region ap-south-1 --name tws-eks-cluster
