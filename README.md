@@ -335,7 +335,7 @@ server:
       alb.ingress.kubernetes.io/backend-protocol: HTTP
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
       alb.ingress.kubernetes.io/ssl-redirect: '443'
-    hostname: argocd.devopsdock.site
+    hostname: argocd.thirucloud.xyz
     aws:
       serviceType: ClusterIP # <- Used with target-type: ip
       backendProtocolVersion: GRPC
@@ -344,7 +344,7 @@ server:
 ```
 helm upgrade my-argo-cd argo/argo-cd -n argocd -f my-values.yaml
 ```
-5. add the record in route53 “argocd.devopsdock.site” with load balancer dns.
+5. add the record in route53 “argocd.thirucloud.xyz” with load balancer dns.
 
 6. access it in browser.
 
@@ -398,7 +398,7 @@ annotations:
     kubernetes.io/ingress.class: alb
 ```
 
-- **add record to route 53 “easyshop.devopsdock.site”**
+- **add record to route 53 “easyshop.thirucloud.xyz”**
 
 - **Access your site now.**
 
@@ -450,7 +450,7 @@ annotations:
       alb.ingress.kubernetes.io/ssl-redirect: '443'
  
     hosts:
-      - grafana.devopsdock.site
+      - grafana.thirucloud.xyz
 ```
 
 **Prometheus:** 
@@ -469,7 +469,7 @@ annotations:
     
   
     hosts: 
-      - prometheus.devopsdock.site
+      - prometheus.thirucloud.xyz
         paths:
         - /
         pathType: Prefix
@@ -486,7 +486,7 @@ annotations:
       alb.ingress.kubernetes.io/ssl-redirect: '443'
     
     hosts: 
-      - alertmanager.devopsdock.site
+      - alertmanager.thirucloud.xyz
     paths:
     - /
     pathType: Prefix
@@ -677,7 +677,7 @@ ingress:
   # kubernetes.io/ingress.class: nginx
   # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: logs-kibana.devopsdock.site
+    - host: logs-kibana.thirucloud.xyz
       paths:
         - path: /
 ```
