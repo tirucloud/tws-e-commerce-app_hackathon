@@ -116,7 +116,6 @@ pipeline {
                         gitCredentials: 'github-credentials',
                         gitUserName: 'tirucloud',
                         gitUserEmail: 'tirucloud@gmail.com'
-                        manifestsPath: 'kubernetes'
                     )
                 }
             }
